@@ -26,8 +26,9 @@ ________________________________________________________________________________
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
 laurea (286)
 
-
-
+SELECT * 
+FROM `courses` 
+WHERE `period` = 'I semestre' and `year` = '1';
 
 ________________________________________________________________________________________
 
