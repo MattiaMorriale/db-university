@@ -54,6 +54,17 @@ ________________________________________________________________________________
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
+SELECT degrees.name AS 'corso di laurea', courses.name AS 'corso', courses.cfu, teachers.name AS 'nome', teachers.surname AS 'cognome'
+FROM `degrees`
+INNER JOIN courses
+ON degrees.id = courses.id
+INNER JOIN course_teacher
+ON courses.id = course_teacher.course_id
+INNER JOIN teachers
+ON course_teacher.course_id = teachers.id
+
+ORDER BY(`corso di laurea`);
+
 ________________________________________________________________________________________
 
 6. Selezionare tutti i docenti che insegnano nel Dipartimento di
