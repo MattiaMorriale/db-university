@@ -26,6 +26,15 @@ ________________________________________________________________________________
 
 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 
+SELECT teachers.name, teachers.surname, teachers.id, courses.name AS 'corso', courses.cfu
+FROM `teachers`
+INNER JOIN course_teacher
+ON teachers.id = teacher_id
+INNER JOIN courses
+ON teacher_id = courses.id
+
+WHERE teachers.id = 44;
+
 ________________________________________________________________________________________
 
 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui
