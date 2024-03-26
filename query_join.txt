@@ -41,6 +41,15 @@ ________________________________________________________________________________
 sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
 nome
 
+SELECT students.name AS 'nome', students.surname AS 'cognome', degrees.name AS 'corso', departments.name AS 'dipartimento'
+FROM `students`
+INNER JOIN degrees
+ON students.id = degrees.id
+INNER JOIN departments
+ON degrees.id = departments.id
+
+ORDER BY(`nome`) ASC;
+
 ________________________________________________________________________________________
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
